@@ -36,3 +36,7 @@ To Stop the app from working all you wanna do is either kill the terminal or ope
 -Formik
 
 -Framer Motion
+
+# Version one
+For reference version one is located :
+https://github.com/aidaarias98/e-commerce
