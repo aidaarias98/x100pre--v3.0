@@ -15,7 +15,7 @@ const Products = () => {
     useEffect(()=>{
         const getAllProducts = async()=>{
             try{
-                const res = await axios.get('http://13.59.100.235:5000/products')
+                const res = await axios.get('http://18.177.151.57:5000/products')
                 setProduct(res.data);
                 setFiltered(res.data);
             }catch (err){
@@ -77,4 +77,4 @@ export default Products
 
 
 
-//const res = await axios.get('http://3.143.3.217:5000/products')
+//const res = await axios.get('http://localhost:5000/products')
