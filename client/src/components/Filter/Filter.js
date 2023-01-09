@@ -19,6 +19,8 @@ function Filter({setActive, active, setFiltered, product}) {
     // },[active]);
 
   return (
+
+    //buttons created
     <div className='filter-container'>
         <button onClick={() => setActive('*')} >All</button>
         <button onClick={() => setActive('Pop')}>Pop</button>

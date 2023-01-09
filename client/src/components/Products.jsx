@@ -12,6 +12,8 @@ const Products = () => {
      const [active, setActive]=useState('');
     const [filtered, setFiltered]=useState([]);
 
+    //where we are essentially calling for out products 
+    //using useEffect
     useEffect(()=>{
         const getAllProducts = async()=>{
             try{
@@ -34,8 +36,10 @@ const Products = () => {
 <>
 <div>
     
+
+{/* Filter component here we are passing the dependencies we need  */}
 <Filter product={product} setFiltered={setFiltered} active={active} setActive={setActive} />
-<div className='productwrapper'>
+<div className='productwrapper'> 
    
 {filtered.map((products) =>(
     
