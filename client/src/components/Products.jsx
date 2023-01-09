@@ -6,20 +6,26 @@ import Filter from './Filter/Filter'
 
 const Products = () => {
     //using hook to fetch mysql data
-    const [product, setProduct] = useState([]);
+    const [product, setProduct] = useState([]); //original copy of my products
 
     //Filter part 
+    //creating another usestate so know which genre is active when button is clicked
+    //useState default data is set to the '' bc we are grabbing strings from mysql
      const [active, setActive]=useState('');
-    const [filtered, setFiltered]=useState([]);
+
+    //duplicate of the first useState 
+    const [filtered, setFiltered]=useState([]); 
 
     //where we are essentially calling for out products 
     //using useEffect
+    //axios 
     useEffect(()=>{
         const getAllProducts = async()=>{
             try{
                 const res = await axios.get('http://3.137.215.130:5000/products')
                 setProduct(res.data);
                 setFiltered(res.data);
+                console.log(setFiltered)
             }catch (err){
                 console.log(err);
             }
@@ -28,17 +34,20 @@ const Products = () => {
         //dependencies only run one
     },[]);
 
-    //usestate for the toggle in products
+    //usestate for the toggle in the products 
+    //default is set to false so close
+    //and when we click on it 'setIsOpen' will go to true
     const [isOpen, setIsOpen]=useState(false);
+
+
   return (
-
-
 <>
 <div>
     
 
-{/* Filter component here we are passing the dependencies we need  */}
+{/* Filter component here we are passing the items that we need  */}
 <Filter product={product} setFiltered={setFiltered} active={active} setActive={setActive} />
+
 <div className='productwrapper'> 
    
 {filtered.map((products) =>(
@@ -51,7 +60,7 @@ const Products = () => {
         key={products.id}>
         
     <img src={products.image} className='productcardImg' alt='img'/>
-        {isOpen && (
+        {isOpen && ( //if it is open i want the content inside to render
     <motion.div 
     className='productcardBody'
     initial={{opacity:0}}

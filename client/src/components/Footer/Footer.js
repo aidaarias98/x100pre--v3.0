@@ -1,3 +1,6 @@
+//footer component that is called in the APP.js 
+//that way its basically made global in each page
+
 import React from 'react'
 import Instagram from '../../assets/instagram.png'
 import Facebook from '../../assets/facebook.png'

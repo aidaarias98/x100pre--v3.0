@@ -1,3 +1,8 @@
+//used react responsive carousel to build slider
+//allows me insert specfic properties to build
+//it according to my needs
+//called this component in the about us page
+
 import React from 'react'
 import {Carousel} from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'

@@ -1,3 +1,8 @@
+//used react responsive carousel to build video slider
+//allows me insert specfic properties to build
+//it according to my needs
+//called this component in the Home page
+
 import React from 'react';
 import {Carousel} from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';

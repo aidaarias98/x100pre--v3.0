@@ -1,7 +1,6 @@
 //ADDING formik (npm install formik)
 //allows us to make forms that are easier to validate etc
-//gives errors automatically ^
-//allows you to not have to do it manually with the html tags aka <required>
+//gives errors automatically 
 
 //ADDING yup (npm install yup)
 //this allows us to validate info
@@ -23,7 +22,7 @@ function Contact() {
         Phone_Number:"",
     };
 
-    //this is where we are using YUP for the from validation
+    //this is where we are using YUP for the form validation
     const validationSchema= Yup.object().shape({
         first_Name:Yup.string().required("Please enter first name"),
         last_Name:Yup.string().required("Please enter a last name"),

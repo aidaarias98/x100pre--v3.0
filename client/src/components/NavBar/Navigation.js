@@ -1,3 +1,5 @@
+//navbar component that is called in the APP.js 
+//that way its basically made global in each page
 
 import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
@@ -8,25 +10,29 @@ import { Button } from '../Button/Button'
 
 
 function Navigation() {
-    const [click, setClick] = useState(false)
-    const[button, setButton]=useState(true)
-
+  //usestate hook when clicking on mobile menu
+    const [click, setClick] = useState(false);
+    //useState for button
+    const[button, setButton]=useState(true);
+    //setting to the opposite of line 14
     const handleClick = () => setClick(!click);
+    //close menu function
     const closeMobileMenu =()=>setClick(false);
 
+//function that that will display the button based on screen size
     const showButton=() =>{
-        if(window.innerWidth <= 960){
+        if(window.innerWidth <= 960){ //removes it when it hits mobile
             setButton(false);
         }else{
             setButton(true);
         }
     };
-
-    //only renders the signup once even if you refresh
+ //only renders the cart button once even if you refresh
     useEffect(()=>{
         showButton();
     },[]);
 
+//whenever it resizes screen show the button
     window.addEventListener('resize', showButton);
     
   return (
@@ -37,8 +43,11 @@ function Navigation() {
         <p className='logotitle'>x100pre Records </p>
         </Link>
         <div className='menu-icon' onClick={handleClick}>
+          {/* //setting up the mobile menu implementing usestate  */}
             <i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
         </div>
+        
+           {/* when you click out on something in mobile menu exit  */}
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
                 <Link to='/' className='nav-links' onClick={closeMobileMenu}>Home</Link>
@@ -61,6 +70,7 @@ function Navigation() {
               </Link>
             </li>
         </ul>
+        {/* implementing the button component using useState hook */}
         {button && <Button buttonStyle='btn--outline'>Cart</Button>}
       </div>
     </nav>

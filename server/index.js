@@ -2,16 +2,14 @@ import express from "express"
 import mysql from 'mysql'
 import cors from 'cors';
 
-
-
 const app = express();
 app.use(express.json()); //parsing incoming json requests
 app.use(cors());
 
 //Creating connection to my mysql 
 const db = mysql.createConnection({
-    host:'127.0.0.1',
-    user: 'devuser',
+    host:'x100pre.cj9rblk5li1w.us-east-2.rds.amazonaws.com',
+    user: 'admin',
     password:'Josefinaflores73',
     database:'x100pre',
 });
@@ -46,15 +44,6 @@ app.listen(5000, ()=>{
     console.log('The server is running on port 5000')
 });
 
-
-
-
-// //EXPRESS USING PATH if we use the require/path
-
-// app.use(express.static(path.join(__dirname, './client', './build')));
-// app.use((req,res)=>{
-//     res.sendFile(path.join(__dirname, './client', './build', 'index.html'));
-// });
 
 
 
