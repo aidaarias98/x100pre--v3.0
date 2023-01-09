@@ -30,14 +30,14 @@ function Home() {
         </div>
         <div className='row'>
             <div className='col'>
-                <img className='lessons' src={Lessons} alt=''></img>
+                <img className='lessons' src={Lessons} alt='guitar lessons'></img>
                 <h4>Guitar Classes</h4>
                 <p>Learn Acoustic or electric guitar by an experienced instructor and learn to play today. It's never to late to learn. All ages. ukulele lessons.</p>
                 <br/>
                 <a href="/aboutus" className= "btn"> Learn More</a> 
             </div>
             <div className='col'>
-                <img className='mic' src={Mic} alt=''></img>
+                <img className='mic' src={Mic} alt='open mic'></img>
                 <h4>Open Mic Night</h4>
                 <p>Come vibe with us at our Open Mic night. Share your talents in front of a live audience through song, poetry or rap!</p>
                 <br/>

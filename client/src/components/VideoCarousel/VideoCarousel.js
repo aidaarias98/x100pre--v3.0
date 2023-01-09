@@ -18,57 +18,50 @@ const VideoCarousel = () => {
     transitionTime={2000}
     animationHandler={'fade'}
     showStatus={false}
-
     >
 
 
+        <div className='video'>    
+             <video 
+             src={BadBunny}
+             autoPlay={true}
+             preLoad="auto"
+             loop
+             muted>
+            </video>
+       </div>
+
         <div className='video'>
-            
- 
-        <video 
-        src={BadBunny}
-        autoPlay={true}
-        preLoad="auto"
-        loop
-        muted>
-  
-  </video>
-  
- 
-        </div>
+            <video 
+            src={SZA}
+            autoPlay={true}
+            preLoad="auto"
+            loop
+            muted >
+            </video>
+       </div>
+
         <div className='video'>
-        <video 
-        src={SZA}
-        autoPlay={true}
-        preLoad="auto"
-        loop
-        muted
-       >
-         
-  </video>
+             <video 
+             autoPlay={true}
+             preLoad="auto"
+             loop
+             muted
+             src={SELENA} >
+            </video>
         </div>
+
         <div className='video'>
-        <video 
-        autoPlay={true}
-        preLoad="auto"
-        loop
-        muted
-        src={SELENA}
-       >
-  </video>
-        </div>
-        <div className='video'>
-        <video 
-        src={HARRY}
-        autoPlay={true}
-        preLoad="auto"
-        loop
-        muted
-       >
-         
-  </video>
-        </div>
-        </Carousel>
+             <video 
+             src={HARRY}
+             autoPlay={true}
+             preLoad="auto"
+             loop
+             muted >
+            </video>
+       </div>
+
+    </Carousel>
   );
 }
 
