@@ -1,16 +1,15 @@
-import React from 'react'
-import '../Products/Products.css';
-import ProductsData from'../../components/Products.jsx'
-
+import React from "react";
+import "../Products/Products.css";
+import ProductsData from "../../components/Products.jsx";
 
 function Products() {
   return (
     <>
-    <h1>Products</h1>
-    <br></br>
-      <ProductsData/>
-  </>
-  )
+      <h1>Products</h1>
+      <br></br>
+      <ProductsData />
+    </>
+  );
 }
 
-export default Products
+export default Products;
